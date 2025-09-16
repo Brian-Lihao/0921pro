@@ -1,0 +1,37 @@
+{
+  "rosbag":{
+      "odom_pose": False,
+      "lidar": {
+         "name": "/velodyne_points",
+         "number": 3,
+         "scan_num": 1,
+         "channels": 16,
+         "angle_range": 200,
+         "horizons": 1824,
+         "threshold": 100,
+      },
+      "camera": {
+        "name": "/camera/color/image_raw/compressed",
+        "number": 1,
+        "resolution": (),
+      },
+      "odometry": {
+        "name": "/odometry/filtered",
+        "number": 50,
+      },
+      "imu": {
+        "name": "/camera/imu",
+        "number": 20,
+      },
+  },
+
+
+  "terrain_cost_map":
+    {
+      "resolution": 0.1,
+      "xy_range": [-300, 300],  # pixel level, [[xmin, ymin], [xmax, ymax]]
+      "angle_range": 120, #120, #200,
+      "target_distance": 15,
+    },
+
+}
